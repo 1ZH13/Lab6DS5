@@ -1,76 +1,225 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
-body{
+body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: white;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-weight: 800;
-
+    color: #333;
 }
 
-/* NAVBAR SEGUN */
-.contenedor{
+header {
+    background: #55d6aa;
+    padding: 20px 0;
+}
+
+.contenedor {
     width: 80%;
     margin: 0 auto;
 }
 
-header{
-    background: #55d6aa;
-}
-
-header::after{
+header::after {
     content: '';
     display: table;
     clear: both;
 }
-.logo-lead{
+
+.logo-lead {
     float: left;
+    color: #fff;
     padding: 10px 0;
-    
 }
 
-nav{
-    float:right;
+.logo-lead h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 600;
 }
 
-nav ul{
+.logo-lead p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-nav li{
+nav li {
     display: inline-block;
     padding-top: 23px;
-    margin-left: 70px;
-    position: relative;
+    margin-left: 40px;
 }
-nav a{
-    color: #444;
+
+nav a {
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: bold;
+    position: relative;
 }
 
 nav a:hover {
     color: #000;
 }
 
-nav a ::before {
+nav a::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: #444;
+    background-color: #fff;
     position: absolute;
-    top: 0;
+    top: -5px;
     width: 0%;
-    transition: all ease-in-out 250ms;
+    transition: width 250ms ease-in-out;
 }
- 
+
 nav a:hover::before {
     width: 100%;
 }
-  
 
-/* Primera foto/titulo */
+/* Post Styles */
+.post {
+    background: #fff;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header h3 {
+    font-size: 28px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.post-header img {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.post-header .subtitulo {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post-header .subtitulo a {
+    color: #55d6aa;
+    text-decoration: none;
+}
+
+.post-header .subtitulo a:hover {
+    text-decoration: underline;
+}
+
+.post-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+.post-body a {
+    color: #55d6aa;
+    text-decoration: none;
+}
+
+.post-body a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #55d6aa;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+footer h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer form fieldset {
+    border: none;
+    padding: 0;
+}
+
+footer form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer form input[type="text"],
+footer form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+footer form input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+footer form input[type="submit"] {
+    background-color: #55d6aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+footer form input[type="submit"]:hover {
+    background-color: #44c399;
+}
